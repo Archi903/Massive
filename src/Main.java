@@ -5,6 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
 
     }
 
@@ -14,21 +15,11 @@ public class Main {
         number[0] = 1;
         number[1] = 2;
         number[2] = 3;
-        System.out.println(number[0]);
-        System.out.println(number[1]);
-        System.out.println(number[2]);
 
         double[] numberFraction = {1.57, 7.654, 9.986};
-        System.out.println(numberFraction[0]);
-        System.out.println(numberFraction[1]);
-        System.out.println(numberFraction[2]);
 
         int[] myNumber = {5, 10, 15, 20, 25};
-        System.out.println(myNumber[0]);
-        System.out.println(myNumber[1]);
-        System.out.println(myNumber[2]);
-        System.out.println(myNumber[3]);
-        System.out.println(myNumber[4]);
+
 
 
     }
@@ -39,44 +30,77 @@ public class Main {
         number[0] = 1;
         number[1] = 2;
         number[2] = 3;
-        System.out.print(Arrays.toString(number));
-
-        System.out.println(" ");
-
         double[] numberFraction = {1.57, 7.654, 9.986};
-        System.out.print(Arrays.toString(numberFraction));
-        System.out.println(" ");
-
         int[] myNumber = {5, 10, 15, 20, 25};
-        System.out.print(Arrays.toString(myNumber));
+
+        for (int i = 0; i < number.length; i++) {
+            System.out.print(number[i]);
+            if (i != number.length - 1) {
+                System.out.print(", ");
+            }
+        }
         System.out.println(" ");
-
-
+        for (int i = 0; i < numberFraction.length; i++) {
+            System.out.print(numberFraction[i]);
+            if (i != numberFraction.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println(" ");
+        for (int i = 0; i < myNumber.length; i++) {
+            System.out.print(myNumber[i]);
+            if (i != numberFraction.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println(" ");
     }
+        public static void task3 () {
+            System.out.println("Задание 3");
+            int[] number = new int[3];
+            number[0] = 1;
+            number[1] = 2;
+            number[2] = 3;
+            for (int i = number.length - 1; i >= 0; i--) {
+                System.out.print(number[i]);
+                if (i != 0) {
+                    System.out.print(", ");
+                }
+            }
+                System.out.println();
 
-    public static void task3() {
-        System.out.println("Задание 3");
-        int[] number = new int[3];
-        number[0] = 1;
-        number[1] = 2;
-        number[2] = 3;
-        for (int reverseNumber = number.length; reverseNumber > 0; reverseNumber--) {
-            System.out.print(reverseNumber + " ");
-        }
-        System.out.println(" ");
+            double[] numberFraction = {1.57, 7.654, 9.986};
+            for (int q = numberFraction.length - 1; q >= 0; q--) {
+                System.out.print(numberFraction[q]);
+                if (q != 0) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println(" ");
 
-        double[] numberFraction = {1.57, 7.654, 9.986};
-        for (int reverseNumber2 = numberFraction.length - 1; reverseNumber2 >= 0; reverseNumber2--) {
-            System.out.print(numberFraction[reverseNumber2] + " ");
-        }
-        System.out.println(" ");
-
-        int[] myNumber = {5, 10, 15, 20, 25};
-        for (int reverseNumber3 = myNumber.length - 1; reverseNumber3 >= 0; reverseNumber3--) {
-            System.out.print(myNumber[reverseNumber3] + " ");
-        }
+            int[] myNumber = {5, 10, 15, 20, 25};
+            for (int s = myNumber.length - 1; s >= 0; s--) {
+                System.out.print(myNumber[s]);
+                if (s != 0) {
+                    System.out.print(", ");
+                }
+            }
             System.out.println(" ");
 
 
+        }
+
+        public static void task4 () {
+            System.out.println("Задание 4");
+            int[] number = new int[3];
+            number[0] = 1;
+            number[1] = 2;
+            number[2] = 3;
+            for (int i = 0; i < number.length; i++)
+                if (number[i] % 2 != 0)
+                    number[i] += 1;
+
+            System.out.println(Arrays.toString(number));
+
+        }
     }
-}
